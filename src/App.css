@@ -93,4 +93,14 @@
     font-size: 18px;
     margin-bottom: 1.5rem;
   }
+  .result {
+    height: 20px;
+    font-size: 20px;
+    margin-top: 2rem;
+    margin-bottom: 1.5rem;
+  }
+  .tic-tac-toe-wrapper div {
+    height: 80px;
+    width: 80px;
+  }
 }
