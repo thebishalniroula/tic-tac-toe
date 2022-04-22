@@ -82,4 +82,11 @@
     margin-top: 1.5rem;
     margin-bottom: 1.5rem;
   }
+  .App h1 {
+    margin: 1rem 0 0.5rem 0;
+    font-size: 18px;
+  }
+  .underline-icon {
+    width: 14rem;
+  }
 }
