@@ -1,8 +1,8 @@
 import "./App.css";
-import icon from "./Group.png";
+import icon from "./group.png";
 import cross from "./cross.png";
 import crossDark from "./crossDark.png";
-import ellipse from "./Ellipse.png";
+import ellipse from "./ellipse.png";
 import ellipseDark from "./ellipseDark.png";
 import React, { useReducer, useState } from "react";
 import importedReducer from "./reducer";
