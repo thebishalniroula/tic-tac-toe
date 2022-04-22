@@ -77,3 +77,9 @@
   background-color: #ffa600;
   transform: scale(1.005);
 }
+@media only screen and (max-width: 600px) {
+  .result {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+}
