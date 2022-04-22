@@ -1,6 +1,6 @@
 # Tic Tac Toe Game
 
-###Live linkk: https://thebishalniroula.github.io/tic-tac-toe/
+### Live linkk: https://thebishalniroula.github.io/tic-tac-toe/
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
