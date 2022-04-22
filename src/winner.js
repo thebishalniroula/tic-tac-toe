@@ -54,6 +54,9 @@ const winner = (state, result, setresult) => {
       state.box5 === "selected_by_false" &&
       state.box6 === "selected_by_false")
   ) {
+    if (result === "") {
+      setresult("Player O won");
+    }
   } else if (
     state.box1 !== "unselected" &&
     state.box2 !== "unselected" &&
