@@ -1,4 +1,5 @@
 # Tic Tac Toe Game
+A simple tic tac toe game based on react.
 
 ### Live linkk: https://thebishalniroula.github.io/tic-tac-toe/
 
