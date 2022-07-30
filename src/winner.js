@@ -1,81 +1,60 @@
 const winner = (state, result, setresult) => {
   const winningBoxes = [
-    [1, 2, 3],
-    [1, 4, 7],
-    [1, 5, 9],
+    ["box1", "box2", "box3"],
+    ["box1", "box4", "box7"],
+    ["box1", "box5", "box9"],
+    ["box3", "box6", "box9"],
+    ["box7", "box8", "box9"],
+    ["box3", "box5", "box7"],
+    ["box2", "box5", "box8"],
+    ["box4", "box5", "box6"],
   ];
+  const allBoxes = [
+    "box1",
+    "box2",
+    "box3",
+    "box4",
+    "box5",
+    "box6",
+    "box7",
+    "box8",
+    "box9",
+  ];
+  const SBT = "selected_by_true";
+  const SBF = "selected_by_false";
+  const UNSELECTED = "unselected";
+  console.log("states", state);
+
+  if (result == "")
+    winningBoxes.forEach((item) => {
+      if (
+        state[item[0]] === SBT &&
+        state[item[1]] === SBT &&
+        state[item[2]] === SBT
+      ) {
+        setresult("Player X won");
+      }
+      if (
+        state[item[0]] === SBF &&
+        state[item[1]] === SBF &&
+        state[item[2]] === SBF
+      ) {
+        setresult("Player O won");
+      }
+    });
   if (
-    (state.box1 === "selected_by_true" &&
-      state.box2 === "selected_by_true" &&
-      state.box3 === "selected_by_true") ||
-    (state.box1 === "selected_by_true" &&
-      state.box4 === "selected_by_true" &&
-      state.box7 === "selected_by_true") ||
-    (state.box1 === "selected_by_true" &&
-      state.box5 === "selected_by_true" &&
-      state.box9 === "selected_by_true") ||
-    (state.box3 === "selected_by_true" &&
-      state.box6 === "selected_by_true" &&
-      state.box9 === "selected_by_true") ||
-    (state.box7 === "selected_by_true" &&
-      state.box8 === "selected_by_true" &&
-      state.box9 === "selected_by_true") ||
-    (state.box3 === "selected_by_true" &&
-      state.box5 === "selected_by_true" &&
-      state.box7 === "selected_by_true") ||
-    (state.box2 === "selected_by_true" &&
-      state.box5 === "selected_by_true" &&
-      state.box8 === "selected_by_true") ||
-    (state.box4 === "selected_by_true" &&
-      state.box5 === "selected_by_true" &&
-      state.box6 === "selected_by_true")
+    state.box1 !== UNSELECTED &&
+    state.box2 !== UNSELECTED &&
+    state.box3 !== UNSELECTED &&
+    state.box4 !== UNSELECTED &&
+    state.box5 !== UNSELECTED &&
+    state.box6 !== UNSELECTED &&
+    state.box7 !== UNSELECTED &&
+    state.box8 !== UNSELECTED &&
+    state.box9 !== UNSELECTED &&
+    result === ""
   ) {
-    if (result === "") {
-      setresult("Player X won");
-    }
-  } else if (
-    (state.box1 === "selected_by_false" &&
-      state.box2 === "selected_by_false" &&
-      state.box3 === "selected_by_false") ||
-    (state.box1 === "selected_by_false" &&
-      state.box4 === "selected_by_false" &&
-      state.box7 === "selected_by_false") ||
-    (state.box1 === "selected_by_false" &&
-      state.box5 === "selected_by_false" &&
-      state.box9 === "selected_by_false") ||
-    (state.box3 === "selected_by_false" &&
-      state.box6 === "selected_by_false" &&
-      state.box9 === "selected_by_false") ||
-    (state.box7 === "selected_by_false" &&
-      state.box8 === "selected_by_false" &&
-      state.box9 === "selected_by_false") ||
-    (state.box3 === "selected_by_false" &&
-      state.box5 === "selected_by_false" &&
-      state.box7 === "selected_by_false") ||
-    (state.box2 === "selected_by_false" &&
-      state.box5 === "selected_by_false" &&
-      state.box8 === "selected_by_false") ||
-    (state.box4 === "selected_by_false" &&
-      state.box5 === "selected_by_false" &&
-      state.box6 === "selected_by_false")
-  ) {
-    if (result === "") {
-      setresult("Player O won");
-    }
-  } else if (
-    state.box1 !== "unselected" &&
-    state.box2 !== "unselected" &&
-    state.box3 !== "unselected" &&
-    state.box4 !== "unselected" &&
-    state.box5 !== "unselected" &&
-    state.box6 !== "unselected" &&
-    state.box7 !== "unselected" &&
-    state.box8 !== "unselected" &&
-    state.box9 !== "unselected"
-  ) {
-    if (result === "") {
-      setresult("It's draw. Reset to rematch.");
-    }
+    setresult("It's draw. Reset to rematch.");
   }
 };
 
