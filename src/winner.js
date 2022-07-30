@@ -1,4 +1,9 @@
 const winner = (state, result, setresult) => {
+  const winningBoxes = [
+    [1, 2, 3],
+    [1, 4, 7],
+    [1, 5, 9],
+  ];
   if (
     (state.box1 === "selected_by_true" &&
       state.box2 === "selected_by_true" &&
