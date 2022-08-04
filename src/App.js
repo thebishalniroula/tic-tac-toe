@@ -6,6 +6,7 @@ import React, { useReducer, useState } from "react";
 import importedReducer from "./reducer";
 import winner from "./winner";
 import Box from "./Box";
+import machine from "./machine";
 function reducer(state, action) {
   return importedReducer(state, action);
 }
@@ -27,6 +28,9 @@ function App() {
   let boxes = [];
   for (const key in state) {
     if (key !== "currentPlayer") boxes.push(key);
+  }
+  if (!state.currentPlayer && result == "") {
+    machine(dispatch, state, result);
   }
   return (
     <div className="App">

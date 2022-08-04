@@ -9,21 +9,9 @@ const winner = (state, result, setresult) => {
     ["box2", "box5", "box8"],
     ["box4", "box5", "box6"],
   ];
-  const allBoxes = [
-    "box1",
-    "box2",
-    "box3",
-    "box4",
-    "box5",
-    "box6",
-    "box7",
-    "box8",
-    "box9",
-  ];
   const SBT = "selected_by_true";
   const SBF = "selected_by_false";
   const UNSELECTED = "unselected";
-  console.log("states", state);
 
   if (result == "")
     winningBoxes.forEach((item) => {

@@ -19,7 +19,11 @@ const Box = ({ boxNumber, state, dispatch, result }) => {
             : style_false
           : {}
       }
-      onClick={() => dispatch({ box: boxNumber, result: result })}
+      onClick={() => {
+        if (state.currentPlayer && result === "") {
+          dispatch({ box: boxNumber, result: result });
+        }
+      }}
     >
       {state[boxNumber] !== "unselected" ? (
         state[boxNumber] === "selected_by_true" ? (
