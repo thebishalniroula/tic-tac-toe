@@ -7,7 +7,6 @@ const machine = (dispatch, state, result) => {
 
   if (result === "") {
     let random = Math.floor(Math.random() * boxesLeft.length + 1);
-    // let isSelected =
     //   state[`box${random}`] === SBT || state[`box${random}`] === SBF;
     // while (isSelected) {
     //   random = Math.floor(Math.random() * 9 + 1);
@@ -16,7 +15,6 @@ const machine = (dispatch, state, result) => {
     // }
     // if (!isSelected) {
     dispatch({ box: `box${random}`, result: result });
-    // }
   }
 };
 
